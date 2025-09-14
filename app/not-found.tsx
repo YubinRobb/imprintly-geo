@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
-import { Home, ArrowLeft } from 'lucide-react'
+import { Home } from 'lucide-react'
 
 export default function NotFound() {
   return (
@@ -17,16 +17,12 @@ export default function NotFound() {
           </CardDescription>
         </CardHeader>
         <CardContent className="space-y-4">
-          <div className="flex flex-col sm:flex-row gap-3">
-            <Button asChild className="flex-1">
+          <div className="flex justify-center">
+            <Button asChild>
               <Link href="/">
                 <Home className="mr-2 h-4 w-4" />
                 Go Home
               </Link>
-            </Button>
-            <Button variant="outline" onClick={() => window.history.back()} className="flex-1">
-              <ArrowLeft className="mr-2 h-4 w-4" />
-              Go Back
             </Button>
           </div>
         </CardContent>
