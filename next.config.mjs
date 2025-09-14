@@ -22,8 +22,8 @@ const nextConfig = {
     }
     return config
   },
-  // Enable static optimization
-  output: 'standalone',
+  // Remove standalone output for Vercel deployment
+  // output: 'standalone',
   // Optimize images
   images: {
     domains: ['placeholder.svg'],
