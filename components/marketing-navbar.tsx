@@ -42,7 +42,9 @@ export function MarketingNavbar() {
                 {item.name}
               </Link>
             ))}
-            <Button className="bg-blue-600 hover:bg-blue-700 text-white">Start Free Trial</Button>
+            <Button asChild className="bg-blue-600 hover:bg-blue-700 text-white">
+              <Link href="/dashboard">Start Free Trial</Link>
+            </Button>
           </div>
 
           {/* Mobile menu button */}
@@ -72,7 +74,9 @@ export function MarketingNavbar() {
                 </Link>
               ))}
               <div className="px-3 py-2">
-                <Button className="w-full bg-blue-600 hover:bg-blue-700 text-white">Start Free Trial</Button>
+                <Button asChild className="w-full bg-blue-600 hover:bg-blue-700 text-white">
+                  <Link href="/dashboard">Start Free Trial</Link>
+                </Button>
               </div>
             </div>
           </div>

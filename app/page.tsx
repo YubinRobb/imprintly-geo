@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Brain, Share2, Star, ArrowRight, Zap, Users, Target, Globe } from "lucide-react"
+import Link from "next/link"
 import type { Metadata } from "next"
 
 // Added SEO metadata for homepage
@@ -129,11 +130,15 @@ export default function Homepage() {
       <section className="relative overflow-hidden bg-gradient-to-br from-blue-50 via-white to-purple-50 px-6 py-24 sm:py-32">
         <div className="mx-auto max-w-4xl text-center">
           <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl lg:text-7xl">
-            Rank{" "}
-            <span className="bg-gradient-to-r from-red-600 to-yellow-600 bg-clip-text text-transparent">
-              #1 in Chinese LLM Models
-            </span>{" "}
-            | 在中文AI模型中排名第一
+            <div className="mb-2">
+              Rank{" "}
+              <span className="bg-gradient-to-r from-red-600 to-yellow-600 bg-clip-text text-transparent">
+                #1 in Chinese LLM Models
+              </span>
+            </div>
+            <div className="text-3xl sm:text-5xl lg:text-6xl">
+              在中文AI模型中排名第一
+            </div>
           </h1>
           <p className="mt-6 text-lg leading-8 text-gray-600 max-w-3xl mx-auto">
             <strong>Specialized platform for Chinese LLM dominance.</strong> We help brands achieve top rankings in
@@ -141,8 +146,8 @@ export default function Homepage() {
             Transform your English content assets into Chinese LLM-optimized content that ranks first.
           </p>
           <div className="mt-10 flex items-center justify-center gap-x-6">
-            <Button size="lg" className="bg-red-600 hover:bg-red-700 text-white px-8 py-3 text-lg">
-              Rank #1 in Chinese AI
+            <Button asChild size="lg" className="bg-red-600 hover:bg-red-700 text-white px-8 py-3 text-lg">
+              <Link href="/dashboard">Rank #1 in Chinese AI</Link>
             </Button>
             <Button variant="outline" size="lg" className="px-8 py-3 text-lg bg-transparent border-red-600 text-red-600 hover:bg-red-50">
               See Chinese LLM Results
@@ -281,8 +286,8 @@ export default function Homepage() {
           <p className="mt-4 text-xl text-red-100">
             Join 850+ global brands already dominating Chinese AI search with specialized LLM optimization.
           </p>
-          <Button size="lg" className="mt-8 bg-white text-red-600 hover:bg-gray-100 px-8 py-3 text-lg font-semibold">
-            Achieve #1 Chinese LLM Rankings
+          <Button asChild size="lg" className="mt-8 bg-white text-red-600 hover:bg-gray-100 px-8 py-3 text-lg font-semibold">
+            <Link href="/dashboard">Achieve #1 Chinese LLM Rankings</Link>
           </Button>
         </div>
       </section>
